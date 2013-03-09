@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{927F23D0-A63A-4939-B3FF-93488BE9D1EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>μFACT.VB.My.MyApplication</StartupObject>
+    <RootNamespace>μFACT.VB</RootNamespace>
+    <AssemblyName>μFACT.VB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>μFACT.VB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>μFACT.VB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsDOCT.vb" />
+    <Compile Include="Classes\clsPROD.vb" />
+    <Compile Include="Quadros\AcercaDe.Designer.vb">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\AcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\clsDOC.vb" />
+    <Compile Include="Classes\clsTERCT.vb" />
+    <Compile Include="Quadros\DOC.Designer.vb">
+      <DependentUpon>DOC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\DOC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\clsDOClin.vb" />
+    <Compile Include="Módulos\Geral.vb" />
+    <Compile Include="Quadros\DOCDOClin.Designer.vb">
+      <DependentUpon>DOCDOClin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\DOCDOClin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quadros\INICIAL.Designer.vb">
+      <DependentUpon>INICIAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\INICIAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quadros\LISTA.Designer.vb">
+      <DependentUpon>LISTA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\LISTA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Quadros\TERCT.Designer.vb">
+      <DependentUpon>TERCT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quadros\TERCT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Quadros\AcercaDe.resx">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quadros\DOC.resx">
+      <DependentUpon>DOC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quadros\DOCDOClin.resx">
+      <DependentUpon>DOCDOClin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quadros\INICIAL.resx">
+      <DependentUpon>INICIAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quadros\LISTA.resx">
+      <DependentUpon>LISTA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quadros\TERCT.resx">
+      <DependentUpon>TERCT.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+Se não der para attach uma base de dados, é preciso confirmar que o directorio que tem a base de dados unattached tem Full controll nas propriadades da pasta.
+
+Ao fazer attatch, não se é owner da base de dados, é preciso ir as propriadades da base de dados e mudar o owner, tudo isto dentro do SQLSMS. Se não formos ownsers não podemos fazer todas as operaçoens sobre a base de dados nem ver os diagramas.
+
+Escrever descriçoens de flags, ex: "0-Altera, 1-Não Altera".
+
+DBO = Database Owner
+

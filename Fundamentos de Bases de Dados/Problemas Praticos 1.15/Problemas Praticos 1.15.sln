@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Basic Express 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Problemas Praticos 1.15", "Problemas Praticos 1.15\Problemas Praticos 1.15.vbproj", "{A144C704-F7FC-4AC8-8650-4A45C3F0C567}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A144C704-F7FC-4AC8-8650-4A45C3F0C567}.Debug|x86.ActiveCfg = Debug|x86
+		{A144C704-F7FC-4AC8-8650-4A45C3F0C567}.Debug|x86.Build.0 = Debug|x86
+		{A144C704-F7FC-4AC8-8650-4A45C3F0C567}.Release|x86.ActiveCfg = Release|x86
+		{A144C704-F7FC-4AC8-8650-4A45C3F0C567}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

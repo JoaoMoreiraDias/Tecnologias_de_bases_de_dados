@@ -1,0 +1,62 @@
+NULL não é um valor vulgar mas sim um estado de um campo armazenado a parte.
+
+UPDATE, actualiza essa chava em todo lado. Mesmo onde esta é estrangeira.
+
+(A*B)/C <> A/C * B <-Computacionalmente differente, matematicamente igual
+
+datetime serve para armazenar momentos de vida não quantidades de tempo.
+
+A differença entre nchar e nvarchar é que nchar já vem com predefenido com contiudo predefenido (normalment " ").
+
+Drop - comando SQL para remover obejectos da base de dados.
+
+Integridade referencial pode ser obetida por DRI (Decalarative referencial integraty) ou triggers.
+
+SELECT - Instrução base de consulta.
+
+OPTION - Alterar a foruma de resolução do query, não necessario de usar.
+
+DISTINCT - Remove registos repetidos que podem estar em varias tabelas.
+
+* - Não recomendado, so para testes rapidos. Como no Java, é selecionar tudo que existe.
+
+ROWGUICOL - Coluna auto-gerada pelo SQL que gera a sorte 28 alfanumericos em duras tabelas differentes.
+
+colum_alias = "XXXX" - mudar o nome da coluna, ex. mostrar ao utilizador um nome mais simpatico e não tão tecnico ou menemónico.
+
+O nosso grabde obejectivo é tratar de uma base de dados como fosse uma superclass. So se pode mexer em dados atravez de metudos. E a nossa base de dados so pode ser usada pelo utilizador por stored procedures. O utilizador nunca vai mecher na base de dados em si.
+
+VIEW  - SELECT que ja foi criada e esta guardada no sistema. É uma vista.
+
+XML - Pode ser usado para criar representaçõens de infromação. "HTML para dados". Integado com HTML. Tem uma tarde para defeniçãod e dados e outra para taransporte de contiudos. Usado para transposrte de dados pela internet.
+
+join_table - Liga tabelas por uma determinada condição, normalmente por igualdade (no nosso caso).
+
+CROSS JOIN - Cruzar informação de duas tabelas que resulta numa tabela que contem uma combinação de todos os registos de ambas as tabelas. A*B numbero de registos. Pode criar milhoõens de registos e ficar lento.
+
+INNER JOIN - Dos JOINs mais usados, é o pedefenido. Mostra todos os registos da tabela A com os valores relacionados da tabela B. São ouver registos usados não serão usados.
+
+OUTER JOIN - 3 variantes, LEFT, RIGHT  e FULL. LEFT, todos os registos de A e registos com relação com B, ou fica nullo quando não há corespondente. RIGHT, é o mesmo que o LEFT so que torca a ordem. FULL, serão mostrados 100 vamores da tabela A e B que não sao usados.
+
+A-(B-C) <> (A-B)-C - Os JOINS podem ter resultados computacionalmente differentes.
+
+WHERE - Das clausulas mais importantes. Tem uma condição de busca. É uma expressão logica.
+
+LIKE - LIKE ou NOT LIKE. Permite fazer uso de Wildcards, caracteres de substituição.
+
+%, _, [, ], ^ - São escape_charecters. Defenipo depois do ESCAPE, eg ESCAPE "X".
+
+NOT IN - Dar respostas pela negativa, eg. Lista os corredors que nunca ganharam = Corredores - Vencedores. Feito a travez de subquery. Se o subquery for fazio, não existem.
+
+GROUP BY - Faz agregaçõens. WITH CUBE, também mostra resultados parciais.
+
+COUNT, SUM, MAX, MIN - Constantes de agregação, usado nos GROUP BY.
+
+FOR - Tipicamente FOR BROWSE, usado para navegar XML, pouco interesse.
+
+OPTION - Tentar melhorar querys, eg. espermentar e medir tempos de execução entre MERGE, HASH etc... para ver qual é que ficava melhor numa situação.
+
+UNION - É o OU. X OU Y, Query_de_X UNION Query_de_Y.
+
+SELECT * - Selecionar todos. DISTINCT * - Selecionar todos os unicos.
+

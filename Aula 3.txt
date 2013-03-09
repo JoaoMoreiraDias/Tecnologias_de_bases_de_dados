@@ -1,0 +1,14 @@
+http://elearn1213.uportu.pt/file.php/8746/5b.xyzSQL.pdf
+
+Consideraçõens finais de triggers.
+
+transactions
+
+rollbacks
+
+transaction log, ficheiro de apontamente de todas as alteraçõens na base de dados.
+o mecanismo do transact log é: é primeiro registado no log e so depois é que é feita a alteração.
+
+um checkpoint é um ponto de restauro durante uma transação
+
+LOCKS - maneira de por varias pessoas a trabalhara simultaniamente ao mesmo tempo.

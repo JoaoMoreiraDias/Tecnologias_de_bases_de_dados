@@ -1,0 +1,1 @@
+Data Source=.\SQLEXPRESS;AttachDbFilename="C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\Trabalho Prático 2 - Investigação Criminal.mdf";Integrated Security=True;Connect Timeout=30;User Instance=True

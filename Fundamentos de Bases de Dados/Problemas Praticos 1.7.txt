@@ -1,0 +1,57 @@
+public function findValue(byval v as object)
+
+end function
+Friend Class TreeNode
+Public Value As Object
+Public LeftNode As TreeNode
+Public RightNode As TreeNode
+
+End Class
+
+Public Class Tree
+Private _root As TreeNode
+
+Private Sub New()
+End Sub
+
+Sub New(ByVal rootValue As Object)
+    _root = GetNode(rootValue)
+End Sub
+
+Public Sub AddtoTree(ByVal value As Object)
+
+    Dim currentNode As TreeNode = _root
+    Dim nextNode As TreeNode = _root
+
+    While currentNode.Value <> value And Not nextNode Is Nothing
+        currentNode = nextNode
+        If nextNode.Value < value Then
+            nextNode = nextNode.RightNode
+        Else
+            nextNode = nextNode.LeftNode
+        End If
+    End While
+    If currentNode.Value = value Then
+        Console.WriteLine("Duplicate value (" & value & "). Node was not inserted")
+    ElseIf currentNode.Value < value Then
+        currentNode.RightNode = GetNode(value)
+    Else
+        currentNode.LeftNode = GetNode(value)
+    End If
+End Sub
+
+Private Sub inOrderTraverse(ByVal node As TreeNode)
+    If Not node Is Nothing Then
+        inOrderTraverse(node.LeftNode)
+        Console.WriteLine(node.Value)
+        inOrderTraverse(node.RightNode)
+    End If
+End Sub
+
+Private Function GetNode(ByVal value As Object) As TreeNode
+    Dim node As New TreeNode()
+    node.Value = value
+    Return node
+End Function
+
+End Class

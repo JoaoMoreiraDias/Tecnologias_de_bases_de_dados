@@ -1,0 +1,108 @@
+Stored Procedure: Colecção de instruções. SP so estao disponivesi na base de dados em que foram criadas.
+
+Uma SP temporata é criada em runtime, usada e deitada fora.
+
+* -> Local da sessão pessoal.
+** -> Sessão Global (vai ser apagada mais tarde).
+
+SP remota é corrida em outro servidor SQL. No ambiente SQL correr uma SP de uma base de dados para outra.
+
+SP externa é uma corrida fora do ambinte do SQL, a partir de .DLLs.
+
+Razãp para recompilar SP -> Remontar o plano de execução devido a dimensão dos dados que tenhem que ser trabalhados. É recomendado forçar a ordem dos resultados proque é possivek obter resultados differentes com uma SP e a nova SP recompilada.
+
+Vantagens de SP:
+-Reutilização (de rotinas), o mesmo que a reutilização de codigo.
+-... (slides)
+
+Para fazer calculos/aredondamentos etc., é recomendado usar uma rotina para nao obter resultados differentes. SPs devem ser usadas.
+
+SP devem sportar as regras de negocio e vice versa. O utilizador so deve ter acceso a SPs e não a stored procedures. A base de dados é uma superclass com supermetudos, e o utilizador nunca usa a base de dados, faz tudo por SPs e não tem acesso directo as tabelas so as stored procedures. eg. utilizador não consegue fazer um SELECT na tabela, mas consegue usar um métudo para fazer esse mesmo SELECT. Se o utilizador não tiver acceso a base de dados o motor da base de dados proteje o acceso a mesma, forçando a utilização de SPs.
+
+---
+
+Como crias SPs:
+
+CREATE PROC[EDURE] nome_da_sp [numero]
+[ @parametro tipo_dados
+	[VARYING] [= default]  [OUTPUT]
+] [...n]
+[WITH {RECOMPILE | ENCRYPTION | RECOMPILE | ENCRYPTION}]
+[FOR REPLICATION] AS sql_statement [...n]
+
+
+[VARYING] -> No tempo em que sicronização os resultados podem ser editados.
+[OUTPUT] -> By.ref
+Não ter [OUTPUT] -> By.val
+ENCRYPTION -> So o dono é que pode ser o contiudo da SP, outros não podem.
+
+---
+
+Parametros:
+Formais -> Os que estão na definição da rotina
+Reais -> Os que estão na chamada da rotina
+
+Parametros Reais devem ter o nesmo nome que parametros formais.
+
+Posicionais -> Na chamada há uma corespondencia de parametro Real <-> formal, (a, b, c) -> (x, y, z).
+Nominais -> especifique nome mais REAL
+
+---
+
+Executar SPs
+
+É possivel chamar um procedimento que tem o nome de uma variavel, @procedure_name_var.
+
+Valores interessantes devem ser guardados em variaveis importantes, @variable.
+
+A primeira vez que se cria m SP é CREATE, se o projecto já exitir é ALTER.
+
+---
+
+Triggers
+
+SP que é usado quando houveres acçõens sobre os dados num base de dados. 
+
+Quando é executado é impossivel parar-lo. O SQL assegura que é Trigger é executado sempre até ao fim ou nunca é executado, se ouver uma falha a meio o SQL reverte tudo que foi feito até a falha. Independentemente da sua complexidade.
+
+Os triggers assegurão as regras de negocios sobre os dados.
+
+Podem actuar na propria tabela ou em outras, sobre um registo unico ou sobre multiplos.
+
+(DRI - Declarative Relational Integrity)
+
+---
+
+Como criar Triggers
+
+CREATE TRIGGER nome_trigger
+ON [tabel | view] [WITH ENCRYPTION]
+{
+	{FOR|AFTER|INSTEAD OF}
+		{[DELEATE] [,] [INSERT] [,] [UPDATE]}
+		[WITH APPEND]
+		[NOT FOR REPLICATION]
+		AS
+		[{IF UPDATE (colum)}]
+		(................Syntax completo no Slides.....................)
+}
+
+AFTER -> corre é realizado depois de uma accção.
+INSTEAD OF -> server para validar situaçõens. É parecido com um Else para garantir as  regras do negocio.
+
+---
+
+Recursividade de triggers directa -> quando o mesmo triggers corre na mesma tabela:
+
+[]
+^
+|
+[]
+^
+|
+[]
+^
+|
+[]
+
+Trigerrs correm em memoria, por isso são relativamente rapidos. São uma transacção unica e automatica.
